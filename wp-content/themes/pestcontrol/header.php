@@ -23,8 +23,11 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<a id="logo" href="<?php echo bloginfo('url'); ?>" rel="home"><img src="<?php the_field('logo','option'); ?>" /></a>
+			<div id="topCTA">
+				<h2><?php the_field('header_right_cta','option'); ?></h2>
+				<a class="button red" href="tel:<?php the_field('phone','option'); ?>"><?php the_field('phone','option'); ?></a>
+			</div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

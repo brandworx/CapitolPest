@@ -19,6 +19,8 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
+@import url(//fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,100italic,400);
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -26,6 +28,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 2.0 Typography
 3.0 Elements
 4.0 Forms
+4.5 Header
 5.0 Navigation
 	5.1 Links
 	5.2 Menus
@@ -47,7 +50,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 1.0 Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -276,14 +279,19 @@ textarea {
 	line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+	color: #002e5f;
 }
+h1 { font-size: 50px; font-weight: 800; }
+h2 { font-size: 42px; font-weight: 600; }
+h3 { font-size: 32px; font-weight: 500; }
+h4 { font-size: 24px; font-weight: 400; }
+h5 { font-size: 18px; font-weight: 300; }
+h6 { font-size: 14px; font-weight: 100; font-style: italic; }
+
 
 p {
 	margin-bottom: 1.5em;
@@ -487,6 +495,36 @@ textarea {
 	width: 100%;
 }
 
+
+
+
+/*--------------------------------------------------------------
+4.5 Navigation
+--------------------------------------------------------------*/
+.site-branding { padding: 20px 55px; overflow: auto; }
+#logo {
+	float: left;
+	display: inline-block;
+	width: 50%;
+	max-width: 235px;
+}
+#topCTA { float: right; text-align: right; padding-top: 30px; }
+#topCTA h2 { font-weight: 400; }
+#site-navigation { background: #002e5f; }
+.menu-primary-menu-container { margin: 0 0 0 0; text-align: center; }
+#site-navigation #menu-primary-menu { display: inline-block; padding: 0; margin: 0; line-height: normal; }
+#site-navigation #menu-primary-menu .current-menu-item { background: #ffffff; }
+#site-navigation #menu-primary-menu .current-menu-item > a { color: #002e5f; text-decoration: underline; }
+#site-navigation #menu-primary-menu > li { margin-bottom: -7px; }
+#site-navigation #menu-primary-menu > li > a {
+	display: block;
+	text-decoration: none;
+	padding: 25px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+#site-navigation #menu-primary-menu > li > a:hover { text-decoration: underline; }
+
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
@@ -494,17 +532,37 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #a80c37;
+	text-decoration: none;
 }
 
-a:visited {
-	color: purple;
+.button, button {
+	padding: 5px 20px;
+	font-size: 28px;
+	color: #ffffff;
+	display: inline-block;
+	box-shadow: 2px 2px 2px #333333;
+	letter-spacing: 1.5px;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
 }
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
+.button.red {
+	background: #a80c37;
+	border: solid 2px #a80c37;
+}
+.button.red:hover {
+	background: #ffffff;
+	color: #a80c37;
+}
+.button.blue {
+	background: #1d5b9c;
+	border: solid 2px #1d5b9c;
+}
+.button.blue:hover {
+	background: #ffffff;
+	color: #1d5b9c;
 }
 
 a:focus {

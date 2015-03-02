@@ -112,6 +112,11 @@ function pestcontrol_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'pestcontrol_scripts' );
 
+
+//Custom Thumbnail Sizes
+add_image_size( 'homeSlide', 1920, 650, true ); // (cropped)
+
+
 /**
  * Implement the Custom Header feature.
  */
