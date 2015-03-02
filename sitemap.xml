@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+     <url>
+	  <loc>http://localhost/capitolpest/test-post-1/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/contact/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/resources/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/blog/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/projects/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/services/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/faq/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/about/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+     <url>
+	  <loc>http://localhost/capitolpest/home/</loc><lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+	       <priority>0.5</priority></url>
+
+				   <url>
+					<loc>http://localhost/capitolpest/category/uncategorized/</loc>
+					<lastmod>2015-02-27</lastmod><changefreq>always</changefreq>
+					     <priority>0.5</priority></url>
+</urlset>
