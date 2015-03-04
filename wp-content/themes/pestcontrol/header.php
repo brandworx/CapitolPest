@@ -14,6 +14,10 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/js/css/flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="<?php echo bloginfo('template_url'); ?>/js/jquery.flexslider.js"></script>
+
 <?php wp_head(); ?>
 </head>
 

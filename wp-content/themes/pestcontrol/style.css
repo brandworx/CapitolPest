@@ -44,6 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 12.0 Media
 	12.1 Captions
 	12.2 Galleries
+13.0 Home Page
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -265,17 +266,20 @@ th {
 	padding: 0;
 }
 
+.clearfix { clear: both; }
+
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
+body { font-weight: 100; }
+
 body,
 button,
 input,
 select,
 textarea {
 	color: #404040;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
@@ -284,13 +288,14 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	line-height: normal;
 	color: #002e5f;
+	text-transform: uppercase;
 }
-h1 { font-size: 50px; font-weight: 800; }
-h2 { font-size: 42px; font-weight: 600; }
+h1 { font-size: 54px; font-weight: 800; }
+h2 { font-size: 40px; font-weight: 600; }
 h3 { font-size: 32px; font-weight: 500; }
-h4 { font-size: 24px; font-weight: 400; }
-h5 { font-size: 18px; font-weight: 300; }
-h6 { font-size: 14px; font-weight: 100; font-style: italic; }
+h4 { font-size: 28px; font-weight: 400; }
+h5 { font-size: 24px; font-weight: 400; }
+h6 { font-size: 22px; font-weight: 400; }
 
 
 p {
@@ -522,6 +527,7 @@ textarea {
 	padding: 25px;
 	color: #ffffff;
 	text-transform: uppercase;
+	font-weight: 300;
 }
 #site-navigation #menu-primary-menu > li > a:hover { text-decoration: underline; }
 
@@ -536,13 +542,18 @@ a {
 	text-decoration: none;
 }
 
-.button, button {
+.button, button, .ninja-forms-form-wrap input[type="submit"] {
 	padding: 5px 20px;
 	font-size: 28px;
 	color: #ffffff;
 	display: inline-block;
 	box-shadow: 2px 2px 2px #333333;
 	letter-spacing: 1.5px;
+	font-weight: 300;
+	border-radius: initial;
+	text-shadow: none;
+	text-transform: uppercase;
+	line-height: inherit;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
@@ -554,7 +565,8 @@ a {
 }
 .button.red:hover {
 	background: #ffffff;
-	color: #a80c37;
+	border: solid 2px #a80c37;
+	color: #002e5f;
 }
 .button.blue {
 	background: #1d5b9c;
@@ -562,6 +574,7 @@ a {
 }
 .button.blue:hover {
 	background: #ffffff;
+	border: solid 2px #1d5b9c;
 	color: #1d5b9c;
 }
 
@@ -940,3 +953,66 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+/*--------------------------------------------------------------
+13.0 Home Page
+--------------------------------------------------------------*/
+#featured { position: relative; }
+#featured h1, #featured h2 { color: #ffffff; font-weight: 400; margin-bottom: 10px; }
+#featuredLeft {
+	background: rgba(168, 12, 55, 0.9);
+	position: absolute;
+	top: 16%;
+	left: 4%;
+	width: 50%;
+	padding: 30px;
+	color: #ffffff;
+}
+#featuredRight {
+	background: rgba(0, 46, 95, 0.9);
+	position: absolute;
+	top: 16%;
+	right: 4%;
+	width: 28%;
+	text-align: center;
+	padding: 30px 50px;
+	color: #ffffff;
+}
+#featuredRight span { display: block; margin-bottom: 10px; }
+#featured .ninja-forms-form-wrap input {
+	display: block;
+	text-transform: uppercase;
+	width: 100%;
+}
+#featured .ninja-forms-form-wrap input[type="text"] {
+	padding: 16px;
+	font-size: 22px;
+	font-weight: 300;
+}
+
+#services { text-align: center; margin: 0 0 0 0; padding: 3%; }
+#services h2 { margin-bottom: 35px; font-size: 54px; font-weight: 400; }
+.service-wrap {
+	display: inline-block;
+	vertical-align: top;
+	width: 24%;
+	text-align: center;
+}
+
+#slider { text-align: center; margin: 0 0 0 0; padding: 3%; }
+#slider li { clear: inherit !important; }
+.slideText {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	text-align: left;
+}
+#slider .slides img { width: auto; }
+
+
+
+
+
+
+
