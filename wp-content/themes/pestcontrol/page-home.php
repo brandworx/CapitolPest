@@ -91,9 +91,9 @@ get_header(); ?>
 		                		}
 
 		                		if($name && $title){ 
-		                			echo '<h6>' . $name . ' - ' . $title . '</h6>';
+		                			echo '<h3>' . $name . ' - ' . $title . '</h3>';
 	                			} elseif ($name && !$title) {
-		                			echo '<h6>' . $name . '</h6>';
+		                			echo '<h3>' . $name . '</h3>';
 	                			} 
 
 	                			echo $text;

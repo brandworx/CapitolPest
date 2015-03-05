@@ -1,5 +1,8 @@
 jQuery(document).ready(function($){
 	$this = $(this);
 
-	$('#slider').flexslider();
+	$('#slider').flexslider({
+		controlNav: false,
+		directionNav: false,
+	});
 });
