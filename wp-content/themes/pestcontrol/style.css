@@ -1033,8 +1033,8 @@ object {
 14.0 Footer
 --------------------------------------------------------------*/
 #footer { background: #a80c37; overflow: auto; text-align: center; margin: 0 0 0 0; }
-#footLeft {
-	width: 70%;
+#footWrap {
+	width: 95%;
 	padding: 3% 5%;
 	display: inline-block;
 	vertical-align: top;

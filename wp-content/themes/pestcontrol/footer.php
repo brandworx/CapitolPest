@@ -11,7 +11,7 @@
 	</div><!-- #content -->
 
 	<div id="footer">
-		<div id="footLeft">
+		<div id="footWrap">
 			<div class="foot-widget">
 				<h6><?php the_field('mission_statement_title','option'); ?></h6>
 				<p><?php the_field('mission_statement','option'); ?></p>
