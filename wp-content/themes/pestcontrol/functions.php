@@ -102,6 +102,8 @@ add_action( 'widgets_init', 'pestcontrol_widgets_init' );
 function pestcontrol_scripts() {
 	wp_enqueue_style( 'pestcontrol-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'rotate-scripts', get_template_directory_uri() . '/js/rotate.js', array(), '1', true );
+
 	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/custom.js', array(), '1', true );
 	
 	wp_enqueue_script( 'pestcontrol-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

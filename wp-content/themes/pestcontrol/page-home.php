@@ -24,6 +24,7 @@ get_header(); ?>
 				<h2><?php the_field('box_right_title','option'); ?></h2>
 				<span><?php the_field('box_right_text','option'); ?></span>
 				<?php echo do_shortcode($form); ?>
+				<img id="ladyBug" src="<?php echo bloginfo('template_url'); ?>/images/ladybug.png" />
 			</div>
 		</section>
 		<section id="services">

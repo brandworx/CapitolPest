@@ -22,6 +22,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<img id="ladyBugFly" src="<?php echo bloginfo('template_url'); ?>/images/ladybug.gif" />
+
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'pestcontrol' ); ?></a>
 
