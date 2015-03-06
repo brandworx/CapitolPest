@@ -1022,8 +1022,11 @@ object {
 .slideText {
 	display: inline-block;
 	vertical-align: top;
-	width: 50%;
 	text-align: left;
+	box-shadow: 1px 1px 5px #B2B2B2;
+	padding: 20px;
+	max-width: 75%;
+	min-width: 38%;
 }
 #slider .slides img { width: auto; }
 
