@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template used for displaying page content in page-full.php
  *
  * @package pestControl
  */
@@ -11,9 +11,18 @@
 	<?php get_template_part('content','head'); ?>
 
 	<div id="contentWrap">
-		<section id="contentInner">
+		<section id="contentInner" class="full">
 			<div class="entry-content">
 				<?php the_content(); ?>
+
+				<?php 
+					if( have_rows('faqs') ):
+					    while ( have_rows('faqs') ) : the_row();
+					        the_sub_field('');
+					    endwhile;
+					endif;
+				?>
+
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . __( 'Pages:', 'pestcontrol' ),
@@ -27,6 +36,5 @@
 			</footer><!-- .entry-footer -->
 
 		</section>
-		<?php get_sidebar(); ?>
 	</div>
 </article><!-- #post-## -->

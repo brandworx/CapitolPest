@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * Template Name: Full Width Page
  *
  * @package pestControl
  */
@@ -11,7 +11,7 @@ get_header(); ?>
 		
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'single' ); ?>
+				<?php get_template_part( 'content', 'full' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 	</div>
