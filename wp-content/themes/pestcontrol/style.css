@@ -46,6 +46,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.2 Galleries
 13.0 Home Page
 14.0 Footer
+15.0 Inner Pages
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -266,8 +267,6 @@ td,
 th {
 	padding: 0;
 }
-
-.clearfix { clear: both; }
 
 /*--------------------------------------------------------------
 2.0 Typography
@@ -543,7 +542,7 @@ a {
 	text-decoration: none;
 }
 
-.button, button, .ninja-forms-form-wrap input[type="submit"] {
+.button, button, .ninja-forms-form-wrap input[type="submit"], #submit {
 	padding: 5px 20px;
 	font-size: 28px;
 	color: #ffffff;
@@ -569,11 +568,11 @@ a {
 	border: solid 2px #a80c37;
 	color: #002e5f;
 }
-.button.blue {
+.button.blue, #submit {
 	background: #1d5b9c;
 	border: solid 2px #1d5b9c;
 }
-.button.blue:hover {
+.button.blue:hover, #submit:hover {
 	background: #ffffff;
 	border: solid 2px #1d5b9c;
 	color: #1d5b9c;
@@ -755,30 +754,8 @@ a:active {
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-}
 
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
+.clearfix { clear: both; }
 
 /*--------------------------------------------------------------
 9.0 Widgets
@@ -821,15 +798,13 @@ a:active {
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-content p:first-child {
+	margin-top: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1023,8 +998,6 @@ object {
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
-	box-shadow: 1px 1px 5px #B2B2B2;
-	padding: 20px;
 	max-width: 75%;
 	min-width: 38%;
 }
@@ -1088,3 +1061,35 @@ object {
 #colophon { background: #efe8db; font-size: 14px; padding: 5px 20px; text-align: right; }
 
 
+/*--------------------------------------------------------------
+15.0 Inner Pages
+--------------------------------------------------------------*/
+#contentWrap { padding: 3%; overflow: auto; }
+#contentInner { float: left; width: 70%; }
+#titleBG { display: block; }
+#featured .entry-title {
+	position: absolute;
+	bottom: 0px;
+	padding: 1% 2% 1% 4%;
+	background: rgba(168, 12, 55, 0.9);
+	min-width: 33%;
+	max-width: 66%;
+	margin: 0;
+	text-transform: inherit;
+}
+#secondary { float: right; width: 24%; }
+.widget {
+	border-bottom: solid 2px #333333;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.widget img {
+	display: inline-block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.widget ul {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}

@@ -119,6 +119,7 @@ add_action( 'wp_enqueue_scripts', 'pestcontrol_scripts' );
 
 //Custom Thumbnail Sizes
 add_image_size( 'homeSlide', 1920, 650, true ); // (cropped)
+add_image_size( 'titleBG', 1920, 400, true ); // (cropped)
 add_image_size( 'serviceThumb', 350, 200, true ); // (cropped)
 
 
