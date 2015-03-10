@@ -542,8 +542,8 @@ a {
 	color: #a80c37;
 	text-decoration: none;
 }
-
-.button, button, .ninja-forms-form-wrap input[type="submit"], #submit {
+#posts-nav a { color: #ffffff; }
+.button, #posts-nav a, button, .ninja-forms-form-wrap input[type="submit"], #submit {
 	padding: 5px 20px;
 	font-size: 28px;
 	color: #ffffff;
@@ -560,20 +560,20 @@ a {
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;
 }
-.button.red {
+.button.red, .button.red a {
 	background: #a80c37;
 	border: solid 2px #a80c37;
 }
-.button.red:hover {
+.button.red:hover, .button.red a {
 	background: #ffffff;
 	border: solid 2px #a80c37;
 	color: #002e5f;
 }
-.button.blue, #submit {
+.button.blue, #posts-nav a, #submit, .button.red a {
 	background: #1d5b9c;
 	border: solid 2px #1d5b9c;
 }
-.button.blue:hover, #submit:hover {
+.button.blue:hover, #posts-nav a:hover, #submit:hover, .button.red a {
 	background: #ffffff;
 	border: solid 2px #1d5b9c;
 	color: #1d5b9c;
@@ -781,6 +781,7 @@ a:active {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+p { margin: 1% 0; }
 .sticky {
 	display: block;
 }
@@ -1187,4 +1188,10 @@ object {
 #gallery {
 	margin: 0;
   	padding: 0;
+}
+
+.entry-sum {
+	clear: both;
+	overflow: auto;
+	margin-bottom: 40px;
 }
