@@ -102,6 +102,26 @@ add_action( 'widgets_init', 'pestcontrol_widgets_init' );
 function pestcontrol_scripts() {
 	wp_enqueue_style( 'pestcontrol-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'flexslider-style', get_template_directory_uri() . '/js/css/flexslider.css' );
+
+	wp_enqueue_style( 'jquery-ui-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.min.css' );
+
+	wp_enqueue_style( 'fancyBox-style', get_template_directory_uri() . '/js/fancyBox/source/jquery.fancybox.css' );
+
+	wp_enqueue_style( 'fancyBox-style-2', get_template_directory_uri() . '/js/fancyBox/helpers/jquery.fancybox-buttons.css' );
+
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', array(), '1', true );
+
+	wp_enqueue_script( 'jquery-ui-scripts', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.min.js', array(), '1', true );
+
+	wp_enqueue_script( 'flexslider-scripts', get_template_directory_uri() . '/js/jquery.flexslider.js', array(), '1', true );
+
+	wp_enqueue_script( 'fancyBox-scripts', get_template_directory_uri() . '/js/fancyBox/source/jquery.fancybox.pack.js', array(), '1', true );
+
+	wp_enqueue_script( 'fancyBox-scripts-2', get_template_directory_uri() . '/js/fancyBox/helpers/jquery.fancybox-buttons.js', array(), '1', true );
+
+	wp_enqueue_script( 'fancyBox-scripts-3', get_template_directory_uri() . '/js/fancyBox/helpers/jquery.fancybox-media.js', array(), '1', true );
+	
 	wp_enqueue_script( 'rotate-scripts', get_template_directory_uri() . '/js/rotate.js', array(), '1', true );
 
 	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/custom.js', array(), '1', true );

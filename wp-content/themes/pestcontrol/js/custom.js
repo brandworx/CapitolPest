@@ -6,6 +6,18 @@ jQuery(document).ready(function($){
 		directionNav: false,
 	});
 
+	$( "#accordion" ).accordion();
+	$( "#tabs" ).tabs();
+
+	$(function(){
+		var tabs = $('#tabs ul.ui-tabs-nav');
+		var tabsHeight = tabs.height();
+
+		$('#tabs .ui-tabs-panel').css('min-height',tabsHeight);
+	});
+
+	$(".fancybox").fancybox();
+
 	setTimeout(
 	  function() 
 	  {

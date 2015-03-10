@@ -1104,3 +1104,87 @@ object {
 	padding: 0;
 	list-style-position: inside;
 }
+
+#accordion {
+	background: #efe8db;
+}
+.question {
+	background: #1d5b9c;
+	color: #ffffff;
+	padding: 1% 2% !important;
+	position: relative;
+}
+.question:before {
+	position: absolute;
+	content: '';
+	width: 30px;
+	border-top: solid 5px #ffffff;
+	top: 25px;
+	right: 58px;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    -webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.question:after {
+	position: absolute;
+	content: '';
+	width: 30px;
+	border-top: solid 5px #ffffff;
+	top: 25px;
+	right: 40px;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    -webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.question.ui-accordion-header-active:before {
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.question.ui-accordion-header-active:after {
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+.answer-title { font-size: 100%; }
+
+.ui-tabs-nav {
+	max-width: 18%;
+	float: left;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.ui-tabs .ui-tabs-nav li {
+	display: block;
+	float: none !important;
+	margin: 0 !important;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	background: #1d5b9c;
+	color: #ffffff;
+	display: block;
+	float: none !important;
+	padding: 1.5em 2em !important;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-active .ui-tabs-anchor {
+	background: #efe8db;
+	color: #333333;
+}
+.ui-tabs-panel {
+	background: #efe8db !important;
+	float: left;
+	width: 80%;
+}
+
+#gallery {
+	margin: 0;
+  	padding: 0;
+}
