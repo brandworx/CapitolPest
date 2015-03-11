@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 13.0 Home Page
 14.0 Footer
 15.0 Inner Pages
+16.0 Resposive Styles
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -194,6 +195,8 @@ button,
 select {
 	text-transform: none;
 }
+
+input[type="text"], input[type="textarea"], textarea { background: #efe8db; border: none; }
 
 button,
 html input[type="button"],
@@ -474,8 +477,6 @@ input[type="password"],
 input[type="search"],
 textarea {
 	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
 }
 
 input[type="text"]:focus,
@@ -511,10 +512,9 @@ textarea {
 #logo {
 	float: left;
 	display: inline-block;
-	width: 50%;
-	max-width: 235px;
+	max-width: 175px;
 }
-#topCTA { float: right; text-align: right; padding-top: 30px; }
+#topCTA { float: right; text-align: right; }
 #topCTA h2 { font-weight: 400; }
 #site-navigation { background: #002e5f; }
 .menu-primary-menu-container { margin: 0 0 0 0; text-align: center; }
@@ -809,6 +809,8 @@ p { margin: 1% 0; }
 	margin-top: 0;
 }
 
+.cat-page-title { margin-bottom: 20px; }
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
@@ -830,7 +832,7 @@ p { margin: 1% 0; }
 
 #comments { margin-top: 20px; }
 .comment-list { padding: 0; margin: 0 0 2%; list-style: none; }
-.comment-list a { color: #b8d100; text-decoration: none; }
+.comment-list a { color: #a80c37; text-decoration: none; }
 .comment-list a:hover { text-decoration: underline; }
 .comment-list .comment { background: #efe8db; padding: 3%; margin-top: 1%; }
 .comment-list .comment .children { margin: 0; padding: 0; }
@@ -950,16 +952,16 @@ object {
 	width: 50px;
 	height: auto;
 	position: absolute;
-  	top: 550px;
+  	top: 450px;
   	z-index: 31;
 }
 #ladyBug {
 	display: none;
 	position: absolute;
-	bottom: 83px;
+	right: 5%;
+	bottom: 20%;
 	width: 50px;
 	height: auto;
-	right: 28px;
 }
 #featured { position: relative; }
 #featured h1, #featured h2 { color: #ffffff; font-weight: 400; margin-bottom: 10px; }
@@ -979,23 +981,24 @@ object {
 	right: 4%;
 	width: 28%;
 	text-align: center;
-	padding: 30px 50px;
+	padding: 2% 2.5%;
 	color: #ffffff;
 }
 #featuredRight span { display: block; margin-bottom: 10px; }
+#featuredRight .field-wrap { margin-bottom: 4%; }
 #featured .ninja-forms-form-wrap input {
 	display: block;
 	text-transform: uppercase;
 	width: 100%;
 }
 #featured .ninja-forms-form-wrap input[type="text"] {
-	padding: 16px;
+	padding: 2% 4%;
 	font-size: 22px;
 	font-weight: 300;
 }
 
 #services { text-align: center; margin: 0 0 0 0; padding: 3%; }
-#services h2 { margin-bottom: 35px; font-size: 54px; font-weight: 400; }
+#services h2 { margin-bottom: 35px; font-weight: 400; }
 .service-wrap {
 	display: inline-block;
 	vertical-align: top;
@@ -1194,4 +1197,76 @@ object {
 	clear: both;
 	overflow: auto;
 	margin-bottom: 40px;
+}
+
+
+/*--------------------------------------------------------------
+16.0 Responsive Styles
+--------------------------------------------------------------*/
+@media only screen and (max-width: 1500px){
+	#ladyBugFly {
+	  	top: 550px;
+	}
+	#ladyBug {
+		bottom: 20%;
+		right: 0;
+	}
+}
+@media only screen and (max-width: 1400px){
+	#featuredLeft, #featuredRight { top: 6%; }
+	#featuredRight { width: 38%; }
+}
+@media only screen and (max-width: 1300px){
+	h1 { font-size: 32px; font-weight: 800; }
+	h2 { font-size: 28px; font-weight: 600; }
+	h3 { font-size: 24px; font-weight: 500; }
+	h4 { font-size: 18px; font-weight: 400; }
+	h5 { font-size: 16px; font-weight: 300; }
+	h6 { font-size: 14px; font-weight: 100; font-style: italic; }
+}
+@media only screen and (max-width: 1200px){
+	#featuredRight { padding: 2%; }
+	#featured .ninja-forms-form-wrap input[type="text"] {
+		padding: 0 4%;
+	}
+}
+/*** IPAD & TABLETS ***/
+@media only screen and (max-width: 1024px){
+	h1 { font-size: 28px; font-weight: 800; }
+	h2 { font-size: 24px; font-weight: 600; }
+	h3 { font-size: 22px; font-weight: 500; }
+	h4 { font-size: 18px; font-weight: 400; }
+	h5 { font-size: 16px; font-weight: 300; }
+	h6 { font-size: 14px; font-weight: 100; font-style: italic; }
+	.button, #posts-nav a, button, .ninja-forms-form-wrap input[type="submit"], #submit { font-size: 18px; }
+	input[type="text"], input[type="textarea"], textarea { font-size: 18px !important; }
+}
+@media only screen and (max-width: 900px){
+	#featuredLeft span, #featuredRight span { display: none; }
+	#featuredLeft h1 br { display: none; }
+}
+@media only screen and (max-width: 768px){
+
+}
+/*** Mobile Devices ***/
+@media only screen and (max-width: 720px){
+	#logo {
+		float: none;
+		display: block;
+		max-width: 175px;
+		margin: 0 auto 1%;
+	}
+	#topCTA { float: none; text-align: center; }
+	.button, .posts-navigation .nav-previous a, .posts-navigation .nav-next a { font-size: 18px; }
+}
+@media only screen and (max-width: 480px){
+	h1 { font-size: 22px; font-weight: 800; }
+	h2 { font-size: 20px; font-weight: 600; }
+	h3 { font-size: 18px; font-weight: 500; }
+	h4 { font-size: 16px; font-weight: 400; }
+	h5 { font-size: 14px; font-weight: 300; }
+	h6 { font-size: 12px; font-weight: 100; font-style: italic; }
+}
+@media only screen and (max-width: 380px){
+
 }

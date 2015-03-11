@@ -11,6 +11,7 @@
 	<div id="contentWrap">
 		<section id="contentInner">
 			<div class="entry-content">
+				<span id="postMeta">Posted by <?php the_author(); ?> on <?php the_date(); ?></span>
 				<?php the_content(); ?>
 				<?php
 					wp_link_pages( array(

@@ -22,11 +22,14 @@ jQuery(document).ready(function($){
 	  function() 
 	  {
 	    $bug = $('#ladyBugFly');
+	    $button = $('#featuredRight input[type="submit"]');
+	    $buttonTop = $button.offset();
+	    $buttonWidth = $button.width();
 	    $bug.show();
 	    $bug.rotate(180);
 	    $bug.animate({
-		    left: "92%",
-		    top: "625px"
+		    left: $buttonTop.left + $buttonWidth,
+		    top: $buttonTop.top
 		  }, 2500, 'swing', function(){
 		  	$bug.hide();
 		  	$('#ladyBug').show();
