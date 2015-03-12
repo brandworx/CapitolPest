@@ -1,6 +1,14 @@
 jQuery(document).ready(function($){
 	$this = $(this);
 
+	$(function(){
+		var mobileNav = $('#mobileNav .mobile');
+
+		mobileNav.click(function(){
+			$('#tabs').toggleClass('toggled');
+		});
+	});
+
 	$('#slider').flexslider({
 		controlNav: false,
 		directionNav: false,

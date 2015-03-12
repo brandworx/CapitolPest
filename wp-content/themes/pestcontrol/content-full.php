@@ -33,7 +33,8 @@
 					<?php $count = 0; ?>
 					<div id="tabsWrap">
 						<div id="tabs">
-							<ul>
+							<ul id="mobileNav">
+								<li class="mobile">Choose Here</li>
 							<?php while ( have_rows('tabs') ) : the_row(); ?>
 									<li><a href="#tabs-<?php echo $count; ?>"><?php the_sub_field('service'); ?></a></li>
 									<?php $count++; ?>
