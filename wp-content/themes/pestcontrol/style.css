@@ -1158,6 +1158,7 @@ object {
 }
 .answer-title { font-size: 100%; }
 
+.ui-tabs .ui-tabs-nav li.mobile { display: none; }
 .ui-tabs-nav {
 	max-width: 40%;
 	float: left;
